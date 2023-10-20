@@ -2,6 +2,7 @@ package game.strategy;
 
 public class MoveLeft implements MoveStrategy {
     private float x, y, speed;
+    private final String direction = "Left";
 
     public MoveLeft(float x, float y, float speed) {
         this.x = x;
@@ -10,17 +11,29 @@ public class MoveLeft implements MoveStrategy {
     }
 
     @Override
-    public void Move() {
-        this.x -= speed;
+    public void Move(float delta) {
+        this.x -= speed * delta;
     }
 
     @Override
-    public float GetX() {
+    public Boolean StopCondition() {
+        if (this.x < 0)
+            return true;
+        return false;
+    }
+
+    @Override
+    public float getX() {
         return this.x;
     }
 
     @Override
-    public float GetY() {
+    public float getY() {
         return this.y;
+    }
+
+    @Override
+    public String getDirection() {
+        return this.direction;
     }
 }

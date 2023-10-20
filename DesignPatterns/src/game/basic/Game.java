@@ -1,14 +1,15 @@
 package game.basic;
 
+import game.factory.Factory;
 import game.strategy.MoveLeft;
 import game.strategy.MoveRight;
 import game.strategy.MoveStrategy;
 import org.newdawn.slick.*;
-import org.newdawn.slick.tests.AnimationTest;
+
+import java.util.ArrayList;
 
 public class Game extends BasicGame {
-    private Player player;
-    private DirectionDisplay display;
+    private ArrayList<GameObject> gameObjects;
 
     public Game() {
         super("Animation Test");
@@ -26,19 +27,36 @@ public class Game extends BasicGame {
 
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
-        MoveStrategy ms = new MoveLeft(400f,10f,0.1f);
-        player = new Player(ms);
-        display = new DirectionDisplay("Left");
+        gameObjects = new ArrayList<GameObject>();
+
+        //Strategy Pattern
+        ArrayList<MoveStrategy> ms = new ArrayList<MoveStrategy>();
+        ms.add(new MoveLeft(400f,10f,0.1f));
+        ms.add(new MoveRight(400f,10f,0.2f));
+
+        //Observer Pattern
+        DirectionDisplay display = new DirectionDisplay("Left");
+        gameObjects.add(display);
+
+        gameObjects.add(new Player(0,0, ms, display));
+
+        //Factory Pattern
+        gameObjects.add(Factory.CreateRandom(300f, 200f, 0.5f));
+        gameObjects.add(Factory.CreateRandom(300f, 220f, 0.5f));
+        gameObjects.add(Factory.CreateRandom(300f, 240f, 0.5f));
     }
 
     @Override
-    public void update(GameContainer gameContainer, int i) throws SlickException {
-        player.Move();
+    public void update(GameContainer gameContainer, int delta) throws SlickException {
+        for (GameObject g : gameObjects) {
+            g.Update(delta);
+        }
     }
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
-        player.Render(graphics);
-        display.Render(graphics);
+        for (GameObject g : gameObjects) {
+            g.Render(graphics);
+        }
     }
 }

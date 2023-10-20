@@ -1,5 +1,5 @@
 package game.observer;
 
 public interface Observer {
-    void Inform();
+    void Inform(String direction);
 }
