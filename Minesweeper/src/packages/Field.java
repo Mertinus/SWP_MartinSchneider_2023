@@ -12,38 +12,45 @@ public class Field {
     public Field() {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                field[x][y] = new Cell(Cell.TYPE.EMPTY, 0, false);
+                field[x][y] = new Cell(Cell.TYPE.EMPTY, 0, false, x, y);
             }
         }
     }
 
-    public void CreateNewField(int xClicked, int yClicked) {
+    public boolean CreateNewField(int xClicked, int yClicked) {
+        Cell clickedCell = DetermineCell(xClicked, yClicked);
+        if (clickedCell == null)
+            return false;
+
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                if (Math.sqrt(Math.pow(x-xClicked,2) + Math.pow(y-yClicked,2)) < 3) {
-                    field[x][y] = new Cell(Cell.TYPE.EMPTY, 0, true);
+                if (Math.sqrt(Math.pow(x-clickedCell.GetXPos(),2) + Math.pow(y-clickedCell.GetYPos(),2)) < 3) {
+                    field[x][y] = new Cell(Cell.TYPE.EMPTY, 0, true, x, y);
                 }
                 else {
-                    field[x][y] = new Cell(Cell.TYPE.EMPTY, 0, false);
+                    field[x][y] = new Cell(Cell.TYPE.EMPTY, 0, false, x, y);
                 }
             }
         }
+        //Place random mines
         Random random = new Random();
         for (int i = 0; i < 10; i++) {
             int mineX = random.nextInt(width);
             int mineY = random.nextInt(height);
             if (!field[mineX][mineY].GetDiscovered()) {
-                field[mineX][mineY] = new Cell(Cell.TYPE.MINE, 0, false);
+                field[mineX][mineY] = new Cell(Cell.TYPE.MINE, 0, false, mineX, mineY);
             }
             else
                 i--;
         }
+        //Count and store the neighbours
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 int n = CountNeighbours(x,y);
                 field[x][y].SetNeighbours(n);
             }
         }
+        return true;
     }
 
     public void RenderField(Graphics g, short w, short h) {
@@ -75,13 +82,23 @@ public class Field {
     }
 
     public boolean SetCell(int x, int y) {
-        if (x >= 0 && x < width && y >= 0 && y < height) {
-            field[x][y].SetDiscovered(true);
-            if (field[x][y].GetValue() == Cell.TYPE.MINE)
-                return true;
-        }
+        Cell clickedCell = DetermineCell(x, y);
+        if (clickedCell == null)
+            return false;
+
+        clickedCell.SetDiscovered(true);
+        if (clickedCell.GetValue() == Cell.TYPE.MINE)
+            return true;
 
         return false;
+    }
+
+    public Cell DetermineCell(int x, int y) {
+        for (int i = 0; i < width; i++)
+            for (int j = 0; j < height; j++)
+                if (field[i][j].IsPointInCell(x,y))
+                    return field[i][j];
+        return null;
     }
 
     private final int width = 10;

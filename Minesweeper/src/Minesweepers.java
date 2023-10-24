@@ -1,3 +1,4 @@
+import org.lwjgl.input.Mouse;
 import org.newdawn.slick.*;
 import org.newdawn.slick.tests.AnimationTest;
 import packages.Field;
@@ -6,7 +7,7 @@ import java.util.Scanner;
 public class Minesweepers extends BasicGame {
     private Field field = new Field();
     private boolean loseCondition = false;
-    private boolean firstMove = false;
+    private boolean firstMove = true;
     private static final short WINDOW_WIDTH = 800;
     private static final short WINDOW_HEIGHT = 600;
 
@@ -29,25 +30,21 @@ public class Minesweepers extends BasicGame {
     }
 
     public void update(GameContainer gameContainer, int i) throws SlickException {
+        Input input = gameContainer.getInput();
         if (loseCondition) {
             System.out.println("You lost");
-            return;
+            gameContainer.exit();
         }
         else {
-
-            /*System.out.println("Enter x: ");
-            int xInput = scanner.nextInt();
-            System.out.println("Enter y: ");
-            int yInput = scanner.nextInt();
-
-            if (!firstMove) {
-                field.CreateNewField(xInput, yInput);
-                firstMove = true;
+            if (Mouse.isButtonDown(0)) {
+                if (firstMove) {
+                    field.CreateNewField(input.getMouseX(), input.getMouseY());
+                    firstMove = false;
+                }
+                else {
+                    loseCondition = field.SetCell(input.getMouseX(), input.getMouseY());
+                }
             }
-            else {
-                loseCondition = field.SetCell(xInput, yInput);
-            }
-            System.out.println();*/
         }
     }
 

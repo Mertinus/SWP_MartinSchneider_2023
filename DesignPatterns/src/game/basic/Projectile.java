@@ -1,18 +1,13 @@
 package game.basic;
 
+import game.abstractClasses.MovingGameObject;
 import game.strategy.MoveStrategy;
 import org.newdawn.slick.Graphics;
 
-public class Projectile implements GameObject {
-    private MoveStrategy moveStrategy;
+public class Projectile extends MovingGameObject {
 
     public Projectile(MoveStrategy moveStrategy) {
-        this.moveStrategy = moveStrategy;
-    }
-
-    @Override
-    public void Update(float delta) {
-        this.moveStrategy.Move(delta);
+        super(moveStrategy);
     }
 
     @Override

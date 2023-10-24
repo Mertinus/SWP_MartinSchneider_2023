@@ -1,18 +1,12 @@
 package game.basic;
 
+import game.abstractClasses.MovingGameObject;
 import game.strategy.MoveStrategy;
 import org.newdawn.slick.Graphics;
 
-public class Canonball implements GameObject {
-    private MoveStrategy moveStrategy;
-
+public class Canonball extends MovingGameObject {
     public Canonball(MoveStrategy moveStrategy) {
-        this.moveStrategy = moveStrategy;
-    }
-
-    @Override
-    public void Update(float delta) {
-        this.moveStrategy.Move(delta);
+        super(moveStrategy);
     }
 
     @Override

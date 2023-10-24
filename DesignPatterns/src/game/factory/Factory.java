@@ -7,6 +7,7 @@ import game.strategy.MoveLeft;
 import game.strategy.MoveRight;
 import game.strategy.MoveStrategy;
 
+import java.util.Date;
 import java.util.Random;
 
 public class Factory {
@@ -24,5 +25,17 @@ public class Factory {
         else {
             return new Projectile(moveStrategy);
         }
+    }
+
+    private static long lastSpawnMilli = 0;
+    private static long spawnCooldown = 1000;
+    public static GameObject CreateRandomAfterDelay() {
+        Date date = new Date();
+        long timeMilli = date.getTime();
+        if (timeMilli > lastSpawnMilli + spawnCooldown) {
+            lastSpawnMilli = timeMilli;
+            return Factory.CreateRandom(300f, 400f, 0.05f);
+        }
+        return null;
     }
 }

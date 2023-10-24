@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeecc374-2f49-41db-98a7-4767e2469b53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/game/basic/Canonball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/basic/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/GameObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignPatterns/game/strategy/MoveLeft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignPatterns/game/strategy/MoveLeft.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignPatterns/game/strategy/MoveRight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignPatterns/game/strategy/MoveRight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignPatterns/game/strategy/MoveStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignPatterns/game/strategy/MoveStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/basic/DirectionDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/DirectionDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/basic/Canonball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/Canonball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/basic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/basic/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/basic/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/observer/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/strategy/MoveLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/strategy/MoveLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/strategy/MoveRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/strategy/MoveRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/strategy/MoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/strategy/MoveStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/basic/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/factory/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/Minesweepers.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/Minesweepers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell$TYPE.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell$TYPE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minesweeper/src/Minesweepers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/src/Minesweepers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minesweeper/src/packages/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/src/packages/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minesweeper/src/packages/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/src/packages/Field.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "C:/Users/Marti/Desktop/Schule/SWP_Projekte/Java_Projekte/DesignPatterns",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Marti/Desktop/Schule/SWP_Projekte/Java_Projekte/DesignPatterns&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="game.abstractClasses" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="game.basic" />
       <recent name="game.strategy" />
@@ -100,6 +98,8 @@
       <updated>1582964206231</updated>
       <workItem from="1697187219016" duration="2362000" />
       <workItem from="1697790854897" duration="3899000" />
+      <workItem from="1698147332406" duration="1816000" />
+      <workItem from="1698153739048" duration="2503000" />
     </task>
     <servers />
   </component>

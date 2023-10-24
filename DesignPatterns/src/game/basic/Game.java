@@ -1,12 +1,15 @@
 package game.basic;
 
 import game.factory.Factory;
+import game.singleton.Counter;
 import game.strategy.MoveLeft;
 import game.strategy.MoveRight;
 import game.strategy.MoveStrategy;
 import org.newdawn.slick.*;
 
 import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
+import java.util.Date;
 
 public class Game extends BasicGame {
     private ArrayList<GameObject> gameObjects;
@@ -44,10 +47,24 @@ public class Game extends BasicGame {
         gameObjects.add(Factory.CreateRandom(300f, 200f, 0.5f));
         gameObjects.add(Factory.CreateRandom(300f, 220f, 0.5f));
         gameObjects.add(Factory.CreateRandom(300f, 240f, 0.5f));
+
+        //Singleton
+        Counter counter = Counter.getInstance();
+        Counter counter2 = Counter.getInstance();
+        counter.increment();
+        System.out.println(counter.getCounter());
+        counter2.increment();
+        System.out.println(counter.getCounter());
+        counter.increment();
+        System.out.println(counter.getCounter());
     }
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
+
+        GameObject go = Factory.CreateRandomAfterDelay();
+        if (go != null) gameObjects.add(go);
+
         for (GameObject g : gameObjects) {
             g.Update(delta);
         }
