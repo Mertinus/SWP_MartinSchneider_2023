@@ -7,17 +7,7 @@
     <list default="true" id="eeecc374-2f49-41db-98a7-4767e2469b53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignPatterns/game/basic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/basic/Canonball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/Canonball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/basic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/basic/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/basic/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/factory/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/Minesweepers.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/Minesweepers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell$TYPE.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell$TYPE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/out/production/Minesweeper/packages/Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minesweeper/src/Minesweepers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/src/Minesweepers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minesweeper/src/packages/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/src/packages/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minesweeper/src/packages/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Minesweeper/src/packages/Field.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +48,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="game.factory" />
       <recent name="game.abstractClasses" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -99,7 +90,8 @@
       <workItem from="1697187219016" duration="2362000" />
       <workItem from="1697790854897" duration="3899000" />
       <workItem from="1698147332406" duration="1816000" />
-      <workItem from="1698153739048" duration="2503000" />
+      <workItem from="1698153739048" duration="4283000" />
+      <workItem from="1699969730261" duration="47000" />
     </task>
     <servers />
   </component>

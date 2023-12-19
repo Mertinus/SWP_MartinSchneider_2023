@@ -61,7 +61,6 @@ public class Game extends BasicGame {
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
-
         GameObject go = Factory.CreateRandomAfterDelay();
         if (go != null) gameObjects.add(go);
 
